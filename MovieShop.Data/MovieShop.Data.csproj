@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BF70477F-0764-4213-8456-28FAABA9806F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MovieShop.Data</RootNamespace>
+    <AssemblyName>MovieShop.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CastRepository.cs" />
+    <Compile Include="GenreRepository.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="Migrations\202004071713210_initialmigration.cs" />
+    <Compile Include="Migrations\202004071713210_initialmigration.Designer.cs">
+      <DependentUpon>202004071713210_initialmigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004071731092_UpdatingGenretable.cs" />
+    <Compile Include="Migrations\202004071731092_UpdatingGenretable.Designer.cs">
+      <DependentUpon>202004071731092_UpdatingGenretable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004081421466_creatingMovieTable.cs" />
+    <Compile Include="Migrations\202004081421466_creatingMovieTable.Designer.cs">
+      <DependentUpon>202004081421466_creatingMovieTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004081443535_movieGenreRelation.cs" />
+    <Compile Include="Migrations\202004081443535_movieGenreRelation.Designer.cs">
+      <DependentUpon>202004081443535_movieGenreRelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004081456051_movieTrailerRelation.cs" />
+    <Compile Include="Migrations\202004081456051_movieTrailerRelation.Designer.cs">
+      <DependentUpon>202004081456051_movieTrailerRelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004081944184_addCrewTable.cs" />
+    <Compile Include="Migrations\202004081944184_addCrewTable.Designer.cs">
+      <DependentUpon>202004081944184_addCrewTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004082018458_movieCrewRelation.cs" />
+    <Compile Include="Migrations\202004082018458_movieCrewRelation.Designer.cs">
+      <DependentUpon>202004082018458_movieCrewRelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004082032138_addCastTable.cs" />
+    <Compile Include="Migrations\202004082032138_addCastTable.Designer.cs">
+      <DependentUpon>202004082032138_addCastTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004082038059_movieCastRelation.cs" />
+    <Compile Include="Migrations\202004082038059_movieCastRelation.Designer.cs">
+      <DependentUpon>202004082038059_movieCastRelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004082043581_addUserTable.cs" />
+    <Compile Include="Migrations\202004082043581_addUserTable.Designer.cs">
+      <DependentUpon>202004082043581_addUserTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004082047228_addReviewTable.cs" />
+    <Compile Include="Migrations\202004082047228_addReviewTable.Designer.cs">
+      <DependentUpon>202004082047228_addReviewTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004082050430_reviewAsmovieUserRelation.cs" />
+    <Compile Include="Migrations\202004082050430_reviewAsmovieUserRelation.Designer.cs">
+      <DependentUpon>202004082050430_reviewAsmovieUserRelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004082058531_addFavoriteTable.cs" />
+    <Compile Include="Migrations\202004082058531_addFavoriteTable.Designer.cs">
+      <DependentUpon>202004082058531_addFavoriteTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004082100216_FavoriteAsmovieUserRelation.cs" />
+    <Compile Include="Migrations\202004082100216_FavoriteAsmovieUserRelation.Designer.cs">
+      <DependentUpon>202004082100216_FavoriteAsmovieUserRelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004082103530_addPurchaseTable.cs" />
+    <Compile Include="Migrations\202004082103530_addPurchaseTable.Designer.cs">
+      <DependentUpon>202004082103530_addPurchaseTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004082105594_PurchaseAsmovieUserRelation.cs" />
+    <Compile Include="Migrations\202004082105594_PurchaseAsmovieUserRelation.Designer.cs">
+      <DependentUpon>202004082105594_PurchaseAsmovieUserRelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004082114467_addRoleTable.cs" />
+    <Compile Include="Migrations\202004082114467_addRoleTable.Designer.cs">
+      <DependentUpon>202004082114467_addRoleTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004082118172_userRoleRelation.cs" />
+    <Compile Include="Migrations\202004082118172_userRoleRelation.Designer.cs">
+      <DependentUpon>202004082118172_userRoleRelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="MovieRepository.cs" />
+    <Compile Include="MovieShopDbContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MovieShop.Entities\MovieShop.Entities.csproj">
+      <Project>{a07f446b-73dc-4d38-ad9a-3e70c8bda14f}</Project>
+      <Name>MovieShop.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202004071713210_initialmigration.resx">
+      <DependentUpon>202004071713210_initialmigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004071731092_UpdatingGenretable.resx">
+      <DependentUpon>202004071731092_UpdatingGenretable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004081421466_creatingMovieTable.resx">
+      <DependentUpon>202004081421466_creatingMovieTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004081443535_movieGenreRelation.resx">
+      <DependentUpon>202004081443535_movieGenreRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004081456051_movieTrailerRelation.resx">
+      <DependentUpon>202004081456051_movieTrailerRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004081944184_addCrewTable.resx">
+      <DependentUpon>202004081944184_addCrewTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004082018458_movieCrewRelation.resx">
+      <DependentUpon>202004082018458_movieCrewRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004082032138_addCastTable.resx">
+      <DependentUpon>202004082032138_addCastTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004082038059_movieCastRelation.resx">
+      <DependentUpon>202004082038059_movieCastRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004082043581_addUserTable.resx">
+      <DependentUpon>202004082043581_addUserTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004082047228_addReviewTable.resx">
+      <DependentUpon>202004082047228_addReviewTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004082050430_reviewAsmovieUserRelation.resx">
+      <DependentUpon>202004082050430_reviewAsmovieUserRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004082058531_addFavoriteTable.resx">
+      <DependentUpon>202004082058531_addFavoriteTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004082100216_FavoriteAsmovieUserRelation.resx">
+      <DependentUpon>202004082100216_FavoriteAsmovieUserRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004082103530_addPurchaseTable.resx">
+      <DependentUpon>202004082103530_addPurchaseTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004082105594_PurchaseAsmovieUserRelation.resx">
+      <DependentUpon>202004082105594_PurchaseAsmovieUserRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004082114467_addRoleTable.resx">
+      <DependentUpon>202004082114467_addRoleTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004082118172_userRoleRelation.resx">
+      <DependentUpon>202004082118172_userRoleRelation.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
